@@ -1,0 +1,26 @@
+.title {
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 0.2rem;
+  font-size: large;
+  margin-bottom: 1em;
+}
+
+.tbl {
+  margin: auto;
+  width: 800px;
+  padding-top: 1em;
+}
+
+.table1 {
+  width: 100%;
+}
+
+.wrap {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  column-gap: 1rem;
+}
