@@ -1,14 +1,15 @@
 import { useContext } from 'react'
 import PokemonContext from './PokemonContext'
+import { useSelector, useDispatch } from 'react-redux'
 
 const PokemonFilter = () => {
-  // const { filter, filterSet } = useContext(PokemonContext)
-  const { state, dispatch } = useContext(PokemonContext)
+  const dispatch = useDispatch()
+  const filter = useSelector(state => state.filter)
 
   return (
     <input
       type="text"
-      value={state.filter}
+      value={filter}
       onChange={e =>
         dispatch({
           type: 'SET_FILTER',
