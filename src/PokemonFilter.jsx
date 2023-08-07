@@ -1,14 +1,20 @@
 import { useContext } from 'react'
-import PokemonContext from "./PokemonContext"
+import PokemonContext from './PokemonContext'
 
 const PokemonFilter = () => {
-  const { filter, filterSet } = useContext(PokemonContext)
+  // const { filter, filterSet } = useContext(PokemonContext)
+  const { state, dispatch } = useContext(PokemonContext)
 
   return (
     <input
       type="text"
-      value={filter}
-      onChange={e => filterSet(e.target.value)}
+      value={state.filter}
+      onChange={e =>
+        dispatch({
+          type: 'SET_FILTER',
+          payload: e.target.value,
+        })
+      }
     />
   )
 }

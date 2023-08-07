@@ -3,7 +3,8 @@ import PokemonContext from './PokemonContext'
 
 // { name: { english }, base }
 const PokemonInfo = () => {
-  const { selectedPokemon } = useContext(PokemonContext)
+  // const { selectedPokemon } = useContext(PokemonContext)
+  const { state: { selectedPokemon } } = useContext(PokemonContext)
 
   return selectedPokemon ? (
     <div>
